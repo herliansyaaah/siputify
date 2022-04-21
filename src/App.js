@@ -1,8 +1,14 @@
+import { Provider } from "react-redux";
+import store from "./store";
 import React from "react";
-import './App.css'
+
 import Home from "./home/index";
 
 const App = () => {
-	return <Home />;
+  return (
+		<Provider store={store}>
+		  <Home />
+		</Provider>
+	  );
 };
 export default App;
